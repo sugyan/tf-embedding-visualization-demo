@@ -6,7 +6,6 @@ from tensorflow.models.image.imagenet import classify_image
 from tensorflow.contrib.tensorboard.plugins import projector
 
 classify_image.FLAGS = tf.app.flags.FLAGS
-
 tf.app.flags.DEFINE_string('model_dir', '/tmp/imagenet',
                            """Path to model.""")
 
