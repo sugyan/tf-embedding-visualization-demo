@@ -17,7 +17,7 @@ def main(argv=None):
     with tf.Session() as sess:
         pool3 = sess.graph.get_tensor_by_name('pool_3:0')
         jpeg_data = tf.placeholder(tf.string)
-        thumbnail = tf.cast(tf.image.resize_images(tf.image.decode_jpeg(jpeg_data), [100, 100]), tf.uint8)
+        thumbnail = tf.cast(tf.image.resize_images(tf.image.decode_jpeg(jpeg_data, channels=3), [100, 100]), tf.uint8)
         outputs = []
         files = []
         images = []
